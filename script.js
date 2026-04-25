@@ -30,7 +30,7 @@ if (toggle) {
 document.querySelectorAll(".nav-links a").forEach(link => {
   link.addEventListener("click", () => {
     navMenu.classList.remove("active");
-    toggle.textContent = "☰";
+    toggle.classList.remove("active");
   });
 });
 
