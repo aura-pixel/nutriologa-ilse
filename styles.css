@@ -9,16 +9,6 @@
   z-index: 1000;
 }
 
-@media (max-width: 768px) {
-
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-}
-
 /* NAV PILL */
 .nav-pill {
   display: flex;
@@ -124,27 +114,7 @@
 }
 
 /* BOTÓN HAMBURGUESA */
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
 
-.menu-toggle span {
-  display: block;
-}
-
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
 
 .nav-links.active::before {
   content: "";
@@ -218,6 +188,88 @@
   background: url("img/ilse-1.png") center 60%/cover no-repeat;
 }
 
+/* ========================= */
+/* MENU MOBILE DESDE CERO */
+/* ========================= */
+
+/* BOTÓN */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ANIMACIÓN X */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    padding: 30px 20px;
+
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+
+    transition: all 0.3s ease;
+
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-right {
+    display: none;
+  }
+}
 
 /* OVERLAY */
 .hero-overlay {
