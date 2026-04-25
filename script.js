@@ -100,7 +100,7 @@ function loadLottie(id, path) {
   });
 }
 
-loadLottie("lottie-sport", "lottie/sport.json");
+loadLottie("lottie-sport", "lottie/Sport.json");
 loadLottie("lottie-gut", "lottie/gut.json");
 loadLottie("lottie-hormonal", "lottie/hormonal.json");
 
