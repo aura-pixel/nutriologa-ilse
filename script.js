@@ -23,10 +23,16 @@ const navMenu = document.querySelector(".nav-links");
 if (toggle) {
   toggle.addEventListener("click", () => {
     navMenu.classList.toggle("active");
-
-    toggle.textContent = navMenu.classList.contains("active") ? "✕" : "☰";
+    toggle.classList.toggle("active");
   });
 }
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    toggle.textContent = "☰";
+  });
+});
 
 
 // ==========================
