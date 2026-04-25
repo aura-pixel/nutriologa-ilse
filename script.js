@@ -20,13 +20,12 @@ window.addEventListener("scroll", () => {
 const toggle = document.getElementById("menu-toggle");
 const navMenu = document.querySelector(".nav-links");
 
-if (toggle) {
-  toggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-    toggle.classList.toggle("active");
-  });
-}
+toggle.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+  toggle.classList.toggle("active");
+});
 
+/* cerrar al hacer click */
 document.querySelectorAll(".nav-links a").forEach(link => {
   link.addEventListener("click", () => {
     navMenu.classList.remove("active");
