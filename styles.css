@@ -63,6 +63,12 @@
 .nav-links {
   display: flex;
   gap: 25px;
+  z-index: 999;
+}
+
+.nav-pill {
+  position: relative;
+  z-index: 1000;
 }
 
 .nav-links a {
