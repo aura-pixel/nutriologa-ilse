@@ -189,8 +189,46 @@
 }
 
 /* ========================= */
-/* MENU MOBILE DESDE CERO */
+/* MENU MOBILE*/
 /* ========================= */
+
+/* oculto en desktop */
+.btn-agenda.mobile {
+  display: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .btn-agenda.mobile {
+    display: block;
+    width: 90%;
+    text-align: center;
+    margin-top: 10px;
+    padding: 12px;
+
+    font-size: 0.95rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+
+  .btn-agenda.mobile {
+    margin-top: 20px;
+  }
+
+}
+
+.btn-agenda.mobile {
+  background: linear-gradient(135deg, #ff5a1f, #ff7a3d);
+  color: white;
+  border-radius: 12px;
+}
 
 /* BOTÓN */
 .menu-toggle {
