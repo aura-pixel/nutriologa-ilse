@@ -9,6 +9,16 @@
   z-index: 1000;
 }
 
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+}
+
 /* NAV PILL */
 .nav-pill {
   display: flex;
